@@ -11,6 +11,9 @@ class MainViewController: UIViewController {
     
     // Carriage:
     @IBOutlet weak var carriageView: UIView!
+    @IBOutlet weak var leftDoor: UIView!
+    @IBOutlet weak var rightDoor: UIView!
+    
     @IBOutlet weak var carriageBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
