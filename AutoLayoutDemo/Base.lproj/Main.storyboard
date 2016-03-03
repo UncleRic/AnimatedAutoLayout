@@ -3,8 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -102,13 +104,17 @@
                         <constraints>
                             <constraint firstItem="cHx-Ej-t97" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="28" id="7Au-Di-8J1"/>
                             <constraint firstItem="hyv-v9-VRO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="42" id="98Y-C9-zgf"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cHx-Ej-t97" secondAttribute="bottom" constant="222" id="GfJ-I5-8H9"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cHx-Ej-t97" secondAttribute="bottom" constant="222" id="GfJ-I5-8H9">
+                                <variation key="heightClass=regular-widthClass=compact" constant="115"/>
+                            </constraint>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tZ0-Fw-pxZ" secondAttribute="bottom" id="IPx-ky-2oo"/>
+                            <constraint firstItem="cHx-Ej-t97" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.25" id="NA9-Mw-yfQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-23"/>
+                            </constraint>
                             <constraint firstItem="hyv-v9-VRO" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="O64-Vz-uWq"/>
                             <constraint firstItem="tZ0-Fw-pxZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="TjT-5N-oqs">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
                             </constraint>
-                            <constraint firstItem="cHx-Ej-t97" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="273" id="f8R-qb-sJk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tZ0-Fw-pxZ" secondAttribute="trailing" id="ilz-TV-f9w">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
                             </constraint>
@@ -123,7 +129,7 @@
                                 <exclude reference="98Y-C9-zgf"/>
                                 <exclude reference="O64-Vz-uWq"/>
                                 <exclude reference="7Au-Di-8J1"/>
-                                <exclude reference="f8R-qb-sJk"/>
+                                <exclude reference="NA9-Mw-yfQ"/>
                                 <exclude reference="TjT-5N-oqs"/>
                                 <exclude reference="ilz-TV-f9w"/>
                                 <exclude reference="GfJ-I5-8H9"/>
@@ -140,7 +146,7 @@
                                 <include reference="98Y-C9-zgf"/>
                                 <include reference="O64-Vz-uWq"/>
                                 <include reference="7Au-Di-8J1"/>
-                                <include reference="f8R-qb-sJk"/>
+                                <include reference="NA9-Mw-yfQ"/>
                                 <include reference="TjT-5N-oqs"/>
                                 <include reference="ilz-TV-f9w"/>
                                 <include reference="GfJ-I5-8H9"/>
