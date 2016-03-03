@@ -51,19 +51,19 @@ class MainViewController: UIViewController {
         self.view.layoutIfNeeded()
         
         UIView.animateWithDuration(0.5, delay:0.0,
-               options:.CurveLinear,
-               animations: {
-                if MainViewController.staticToggle {
-                    self.redView.transform = CGAffineTransformMakeRotation(36);
-                } else {
-                    self.redView.transform = CGAffineTransformMakeRotation(-36);
-                }
-                self.view.layoutIfNeeded()
+                                   options:.CurveLinear,
+                                   animations: {
+                                    if MainViewController.staticToggle {
+                                        self.redView.transform = CGAffineTransformMakeRotation(36);
+                                    } else {
+                                        self.redView.transform = CGAffineTransformMakeRotation(-36);
+                                    }
+                                    self.view.layoutIfNeeded()
             },
-           completion: {(finished:Bool) in
-            if finished {
-                MainViewController.staticToggle = !MainViewController.staticToggle
-            }
+                                   completion: {(finished:Bool) in
+                                    if finished {
+                                        MainViewController.staticToggle = !MainViewController.staticToggle
+                                    }
         })
         
     }
@@ -77,7 +77,7 @@ class MainViewController: UIViewController {
             y = 1.0
         }
         
-        UIView.animateWithDuration(0.5) { 
+        UIView.animateWithDuration(0.5) {
             self.carriageBottomConstraint.constant = y
             self.view.layoutIfNeeded()
         }
@@ -88,7 +88,11 @@ class MainViewController: UIViewController {
     
     func carriageDoorAction() {
         UIView.animateWithDuration(0.5) {
-            NSLayoutConstraint.deactivateConstraints(self.doorConstraints)
+            if self.doorConstraints[0].active {
+                NSLayoutConstraint.deactivateConstraints(self.doorConstraints)
+            } else {
+                NSLayoutConstraint.activateConstraints(self.doorConstraints)
+            }
             self.view.layoutIfNeeded()
         }
     }
@@ -110,7 +114,7 @@ class MainViewController: UIViewController {
     // -----------------------------------------------------------------------------------------------------
     
     @IBAction func doorAction(sender: UIBarButtonItem) {
-       carriageDoorAction()
+        carriageDoorAction()
     }
     
     // -----------------------------------------------------------------------------------------------------
