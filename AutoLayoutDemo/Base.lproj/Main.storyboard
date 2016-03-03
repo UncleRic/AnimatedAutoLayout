@@ -84,18 +84,54 @@
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-Ej-t97" userLabel="Elevator Shaft">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bc7-qh-TpE" userLabel="Carriage">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Bc7-qh-TpE" secondAttribute="height" multiplier="77:80" id="xSG-dQ-YfF"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="xSG-dQ-YfF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="xSG-dQ-YfF"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.9930099537" blue="0.63017202210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cHx-Ej-t97" secondAttribute="height" multiplier="77:285" id="JzA-jJ-uMx"/>
+                                    <constraint firstItem="Bc7-qh-TpE" firstAttribute="width" secondItem="cHx-Ej-t97" secondAttribute="width" id="SHa-FK-gR9"/>
+                                    <constraint firstItem="Bc7-qh-TpE" firstAttribute="leading" secondItem="cHx-Ej-t97" secondAttribute="leading" id="ev5-Xa-CoI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bc7-qh-TpE" secondAttribute="bottom" constant="1" id="vvW-rO-t00">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Bc7-qh-TpE"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="JzA-jJ-uMx"/>
+                                        <exclude reference="SHa-FK-gR9"/>
+                                        <exclude reference="ev5-Xa-CoI"/>
+                                        <exclude reference="vvW-rO-t00"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Bc7-qh-TpE"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <include reference="JzA-jJ-uMx"/>
+                                        <include reference="SHa-FK-gR9"/>
+                                        <include reference="ev5-Xa-CoI"/>
+                                        <include reference="vvW-rO-t00"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -126,14 +162,14 @@
                                 <exclude reference="cHx-Ej-t97"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="98Y-C9-zgf"/>
-                                <exclude reference="O64-Vz-uWq"/>
-                                <exclude reference="7Au-Di-8J1"/>
-                                <exclude reference="NA9-Mw-yfQ"/>
-                                <exclude reference="TjT-5N-oqs"/>
-                                <exclude reference="ilz-TV-f9w"/>
                                 <exclude reference="GfJ-I5-8H9"/>
                                 <exclude reference="IPx-ky-2oo"/>
+                                <exclude reference="TjT-5N-oqs"/>
+                                <exclude reference="ilz-TV-f9w"/>
+                                <exclude reference="7Au-Di-8J1"/>
+                                <exclude reference="NA9-Mw-yfQ"/>
+                                <exclude reference="98Y-C9-zgf"/>
+                                <exclude reference="O64-Vz-uWq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -143,14 +179,14 @@
                                 <include reference="cHx-Ej-t97"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="98Y-C9-zgf"/>
-                                <include reference="O64-Vz-uWq"/>
-                                <include reference="7Au-Di-8J1"/>
-                                <include reference="NA9-Mw-yfQ"/>
-                                <include reference="TjT-5N-oqs"/>
-                                <include reference="ilz-TV-f9w"/>
                                 <include reference="GfJ-I5-8H9"/>
                                 <include reference="IPx-ky-2oo"/>
+                                <include reference="TjT-5N-oqs"/>
+                                <include reference="ilz-TV-f9w"/>
+                                <include reference="7Au-Di-8J1"/>
+                                <include reference="NA9-Mw-yfQ"/>
+                                <include reference="98Y-C9-zgf"/>
+                                <include reference="O64-Vz-uWq"/>
                             </mask>
                         </variation>
                     </view>
