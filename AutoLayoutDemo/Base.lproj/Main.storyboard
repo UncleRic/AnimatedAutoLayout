@@ -249,8 +249,10 @@
                         <outlet property="carriageBottomConstraint" destination="vvW-rO-t00" id="Xci-Om-56L"/>
                         <outlet property="carriageView" destination="Bc7-qh-TpE" id="0UQ-Oj-ywX"/>
                         <outlet property="leftDoor" destination="k75-ah-9s9" id="uxG-Fr-CgP"/>
+                        <outlet property="leftDoorWidthConstraint" destination="GOt-Wa-zaW" id="1dm-YY-6q5"/>
                         <outlet property="redView" destination="hyv-v9-VRO" id="Htu-u6-gpg"/>
                         <outlet property="rightDoor" destination="FO8-8W-mXo" id="Vlb-cQ-nRW"/>
+                        <outlet property="rightDoorWidthConstraint" destination="9HT-Bg-ix9" id="H7O-OX-DeR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var rightDoor: UIView!
     
     @IBOutlet weak var carriageBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leftDoorWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightDoorWidthConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
@@ -23,7 +25,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var redView: UIView!
     
     static var staticToggle:Bool = true
+    var doorConstraints = [NSLayoutConstraint]()
     
+    override func viewDidLayoutSubviews() {
+        doorConstraints = [leftDoorWidthConstraint,rightDoorWidthConstraint]
+    }
     // -----------------------------------------------------------------------------------------------------
     
     func animateControls() {
@@ -79,6 +85,15 @@ class MainViewController: UIViewController {
     }
     
     // -----------------------------------------------------------------------------------------------------
+    
+    func carriageDoorAction() {
+        UIView.animateWithDuration(0.5) {
+            NSLayoutConstraint.deactivateConstraints(self.doorConstraints)
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // -----------------------------------------------------------------------------------------------------
     // Mark: - Action methods
     
     
@@ -95,7 +110,7 @@ class MainViewController: UIViewController {
     // -----------------------------------------------------------------------------------------------------
     
     @IBAction func doorAction(sender: UIBarButtonItem) {
-       print("Door Action")
+       carriageDoorAction()
     }
     
     // -----------------------------------------------------------------------------------------------------
