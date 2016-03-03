@@ -8,6 +8,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    // Carriage:
+    @IBOutlet weak var carriageView: UIView!
+    @IBOutlet weak var carriageBottomConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var verticalConstraint: NSLayoutConstraint!
@@ -54,6 +59,21 @@ class MainViewController: UIViewController {
         
     }
     
+    // -----------------------------------------------------------------------------------------------------
+    
+    func carriageLiftAction() {
+        var y:CGFloat = 200.0
+        
+        if self.carriageView.center.y < 170.0 {
+            y = 1.0
+        }
+        
+        UIView.animateWithDuration(0.5) { 
+            self.carriageBottomConstraint.constant = y
+            self.view.layoutIfNeeded()
+        }
+        
+    }
     
     // -----------------------------------------------------------------------------------------------------
     // Mark: - Action methods
@@ -62,9 +82,20 @@ class MainViewController: UIViewController {
     @IBAction func rotateAction(sender: UIBarButtonItem) {
         startRotation()
     }
-    @IBAction func doorAction(sender: UIBarButtonItem) {
-        print("Door Action.")
+    
+    // -----------------------------------------------------------------------------------------------------
+    
+    @IBAction func liftAction(sender: UIBarButtonItem) {
+        carriageLiftAction()
     }
+    
+    // -----------------------------------------------------------------------------------------------------
+    
+    @IBAction func doorAction(sender: UIBarButtonItem) {
+       print("Door Action")
+    }
+    
+    // -----------------------------------------------------------------------------------------------------
     
     @IBAction func exitAction(sender: UIBarButtonItem) {
         exit(0)

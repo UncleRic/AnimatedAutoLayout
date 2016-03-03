@@ -77,7 +77,12 @@
                                     </barButtonItem>
                                     <barButtonItem title="Door" id="ebw-31-r3q">
                                         <connections>
-                                            <action selector="doorAction:" destination="vXZ-lx-hvc" id="1Op-ME-RS7"/>
+                                            <action selector="doorAction:" destination="vXZ-lx-hvc" id="cm3-YK-WeE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Lift" id="oJF-wA-AIg">
+                                        <connections>
+                                            <action selector="liftAction:" destination="vXZ-lx-hvc" id="ubu-si-9ar"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -191,6 +196,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="carriageBottomConstraint" destination="vvW-rO-t00" id="Xci-Om-56L"/>
+                        <outlet property="carriageView" destination="Bc7-qh-TpE" id="0UQ-Oj-ywX"/>
                         <outlet property="redView" destination="hyv-v9-VRO" id="Htu-u6-gpg"/>
                     </connections>
                 </viewController>
