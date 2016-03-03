@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -66,6 +67,7 @@
                                             <action selector="exitAction:" destination="vXZ-lx-hvc" id="f0G-TD-kwQ"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LPo-P5-rtn"/>
                                     <barButtonItem title="Rotate" id="JX3-Sm-YIX">
                                         <connections>
                                             <action selector="rotateAction:" destination="vXZ-lx-hvc" id="epA-0C-bvm"/>
@@ -78,15 +80,35 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-Ej-t97" userLabel="Elevator Shaft">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.9930099537" blue="0.63017202210000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cHx-Ej-t97" secondAttribute="height" multiplier="77:285" id="JzA-jJ-uMx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JzA-jJ-uMx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JzA-jJ-uMx"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.79795017739999996" green="0.93767279579999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="cHx-Ej-t97" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="28" id="7Au-Di-8J1"/>
                             <constraint firstItem="hyv-v9-VRO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="42" id="98Y-C9-zgf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cHx-Ej-t97" secondAttribute="bottom" constant="222" id="GfJ-I5-8H9"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tZ0-Fw-pxZ" secondAttribute="bottom" id="IPx-ky-2oo"/>
                             <constraint firstItem="hyv-v9-VRO" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="O64-Vz-uWq"/>
                             <constraint firstItem="tZ0-Fw-pxZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="TjT-5N-oqs">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
                             </constraint>
+                            <constraint firstItem="cHx-Ej-t97" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="273" id="f8R-qb-sJk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tZ0-Fw-pxZ" secondAttribute="trailing" id="ilz-TV-f9w">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
                             </constraint>
@@ -95,12 +117,16 @@
                             <mask key="subviews">
                                 <exclude reference="hyv-v9-VRO"/>
                                 <exclude reference="tZ0-Fw-pxZ"/>
+                                <exclude reference="cHx-Ej-t97"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="98Y-C9-zgf"/>
                                 <exclude reference="O64-Vz-uWq"/>
+                                <exclude reference="7Au-Di-8J1"/>
+                                <exclude reference="f8R-qb-sJk"/>
                                 <exclude reference="TjT-5N-oqs"/>
                                 <exclude reference="ilz-TV-f9w"/>
+                                <exclude reference="GfJ-I5-8H9"/>
                                 <exclude reference="IPx-ky-2oo"/>
                             </mask>
                         </variation>
@@ -108,12 +134,16 @@
                             <mask key="subviews">
                                 <include reference="hyv-v9-VRO"/>
                                 <include reference="tZ0-Fw-pxZ"/>
+                                <include reference="cHx-Ej-t97"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="98Y-C9-zgf"/>
                                 <include reference="O64-Vz-uWq"/>
+                                <include reference="7Au-Di-8J1"/>
+                                <include reference="f8R-qb-sJk"/>
                                 <include reference="TjT-5N-oqs"/>
                                 <include reference="ilz-TV-f9w"/>
+                                <include reference="GfJ-I5-8H9"/>
                                 <include reference="IPx-ky-2oo"/>
                             </mask>
                         </variation>
@@ -124,6 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="360" y="244.5"/>
         </scene>
     </scenes>
 </document>
