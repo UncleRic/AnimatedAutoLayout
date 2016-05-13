@@ -64,12 +64,6 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZ0-Fw-pxZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="Exit" id="efs-dh-jKE">
-                                        <connections>
-                                            <action selector="exitAction:" destination="vXZ-lx-hvc" id="f0G-TD-kwQ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LPo-P5-rtn"/>
                                     <barButtonItem title="Rotate" id="JX3-Sm-YIX">
                                         <connections>
                                             <action selector="rotateAction:" destination="vXZ-lx-hvc" id="epA-0C-bvm"/>
@@ -83,6 +77,12 @@
                                     <barButtonItem title="Lift" id="oJF-wA-AIg">
                                         <connections>
                                             <action selector="liftAction:" destination="vXZ-lx-hvc" id="ubu-si-9ar"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9q9-av-eyg"/>
+                                    <barButtonItem title="Exit" id="efs-dh-jKE">
+                                        <connections>
+                                            <action selector="exitAction:" destination="vXZ-lx-hvc" id="f0G-TD-kwQ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
